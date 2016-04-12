@@ -1460,41 +1460,50 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </library>
 <library name="esp8266modules">
 <packages>
-<package name="ESP07">
-<description>ESP8266 Module 07 &amp; 08</description>
-<wire x1="-7.9" y1="12.4" x2="-7.9" y2="7.3" width="0.127" layer="21"/>
-<wire x1="-7.9" y1="7.3" x2="-7.9" y2="-7.6" width="0.127" layer="21"/>
-<wire x1="-7.9" y1="-7.6" x2="8.1" y2="-7.6" width="0.127" layer="21"/>
-<wire x1="8.1" y1="-7.6" x2="8.1" y2="7.3" width="0.127" layer="21"/>
-<wire x1="8.1" y1="7.3" x2="8.1" y2="10.4" width="0.127" layer="21"/>
-<wire x1="8.1" y1="10.4" x2="8.1" y2="12.4" width="0.127" layer="21"/>
-<wire x1="8.1" y1="12.4" x2="6.1" y2="12.4" width="0.127" layer="21"/>
-<wire x1="6.1" y1="12.4" x2="-7.9" y2="12.4" width="0.127" layer="21"/>
-<wire x1="-7.9" y1="7.3" x2="8.1" y2="7.3" width="0.127" layer="21"/>
-<wire x1="6.1" y1="12.4" x2="6.1" y2="10.4" width="0.127" layer="21"/>
-<wire x1="6.1" y1="10.4" x2="8.1" y2="10.4" width="0.127" layer="21"/>
-<circle x="7.1" y="11.4" radius="0.806225" width="0.127" layer="21"/>
-<circle x="7.1" y="11.4" radius="0.1" width="0.127" layer="21"/>
-<smd name="ANT" x="8.2" y="6.8" dx="2.5" dy="1" layer="1" roundness="17"/>
-<smd name="CH_PD" x="8.2" y="4.8" dx="2.5" dy="1" layer="1"/>
-<smd name="GPIO16" x="8.2" y="2.8" dx="2.5" dy="1" layer="1"/>
-<smd name="RX" x="8.2" y="0.8" dx="2.5" dy="1" layer="1"/>
-<smd name="TX" x="8.2" y="-1.2" dx="2.5" dy="1" layer="1"/>
-<smd name="NC" x="8.2" y="-3.2" dx="2.5" dy="1" layer="1"/>
-<smd name="GND" x="8.2" y="-5.2" dx="2.5" dy="1" layer="1"/>
-<smd name="VCC" x="-8.2" y="6.8" dx="2.5" dy="1" layer="1"/>
-<smd name="GPIO14" x="-8.2" y="4.8" dx="2.5" dy="1" layer="1"/>
-<smd name="GPIO12" x="-8.2" y="2.8" dx="2.5" dy="1" layer="1"/>
-<smd name="GPIO13" x="-8.2" y="0.8" dx="2.5" dy="1" layer="1"/>
-<smd name="GPIO15" x="-8.2" y="-1.2" dx="2.5" dy="1" layer="1"/>
-<smd name="GPIO2" x="-8.2" y="-3.2" dx="2.5" dy="1" layer="1"/>
-<smd name="GPIO0" x="-8.2" y="-5.2" dx="2.5" dy="1" layer="1"/>
-<text x="-3.8" y="8.7" size="1.016" layer="21">ESP-07</text>
-<rectangle x1="-7" y1="8" x2="-4" y2="11" layer="21"/>
-<rectangle x1="2" y1="8" x2="5" y2="11" layer="21"/>
-<text x="-4" y="5" size="1.016" layer="21">ESP-08</text>
-<text x="-8" y="13" size="1.27" layer="25">&gt;Name</text>
-<text x="-8" y="-9" size="1.27" layer="27">&gt;Value</text>
+<package name="ESP12">
+<description>ESP8266 Module 12</description>
+<wire x1="7.9" y1="14.2" x2="7.9" y2="8.4" width="0.127" layer="22"/>
+<wire x1="7.9" y1="-9.8" x2="-8.1" y2="-9.8" width="0.127" layer="22"/>
+<wire x1="-8.1" y1="-9.8" x2="-8.1" y2="8.4" width="0.127" layer="22"/>
+<wire x1="-8.1" y1="8.4" x2="-8.1" y2="14.2" width="0.127" layer="22"/>
+<wire x1="-8.1" y1="14.2" x2="7.9" y2="14.2" width="0.127" layer="22"/>
+<wire x1="-8.1" y1="8.4" x2="7.9" y2="8.4" width="0.127" layer="22"/>
+<pad name="GND" x="6.9" y="-8.2" drill="0.7" shape="offset"/>
+<wire x1="7.9" y1="8.4" x2="7.9" y2="-9.8" width="0.127" layer="22"/>
+<pad name="GPIO15" x="6.9" y="-6.2" drill="0.7" shape="offset"/>
+<pad name="GPIO2" x="6.9" y="-4.2" drill="0.7" shape="offset"/>
+<pad name="GPIO0" x="6.9" y="-2.2" drill="0.7" shape="offset"/>
+<pad name="GPIO5" x="6.9" y="-0.2" drill="0.7" shape="offset"/>
+<pad name="GPIO4" x="6.9" y="1.8" drill="0.7" shape="offset"/>
+<pad name="RX" x="6.9" y="3.8" drill="0.7" shape="offset"/>
+<pad name="TX" x="6.9" y="5.8" drill="0.7" shape="offset"/>
+<pad name="VCC" x="-7.1" y="-8.2" drill="0.7" shape="offset" rot="R180"/>
+<pad name="GPIO13" x="-7.1" y="-6.2" drill="0.7" shape="offset" rot="R180"/>
+<pad name="GPIO12" x="-7.1" y="-4.2" drill="0.7" shape="offset" rot="R180"/>
+<pad name="GPIO14" x="-7.1" y="-2.2" drill="0.7" shape="offset" rot="R180"/>
+<pad name="GPIO16" x="-7.1" y="-0.2" drill="0.7" shape="offset" rot="R180"/>
+<pad name="CH_PD" x="-7.1" y="1.8" drill="0.7" shape="offset" rot="R180"/>
+<pad name="ADC" x="-7.1" y="3.8" drill="0.7" shape="offset" rot="R180"/>
+<pad name="RESET" x="-7.1" y="5.8" drill="0.7" shape="offset" rot="R180"/>
+<wire x1="-4.9" y1="8.6" x2="-4.9" y2="13.5" width="0.6096" layer="21"/>
+<wire x1="-4.9" y1="13.5" x2="-4" y2="13.5" width="0.6096" layer="21"/>
+<wire x1="-4" y1="13.5" x2="-4" y2="9.8" width="0.6096" layer="21"/>
+<wire x1="-4" y1="9.8" x2="-3" y2="9.8" width="0.6096" layer="21"/>
+<wire x1="-3" y1="9.8" x2="-3" y2="13.4" width="0.6096" layer="21"/>
+<wire x1="-3" y1="13.4" x2="-1.8" y2="13.4" width="0.6096" layer="21"/>
+<wire x1="-1.8" y1="13.4" x2="-1.8" y2="9.8" width="0.6096" layer="21"/>
+<wire x1="-1.8" y1="9.8" x2="-0.6" y2="9.8" width="0.6096" layer="21"/>
+<wire x1="-0.6" y1="9.8" x2="-0.6" y2="13.4" width="0.6096" layer="21"/>
+<wire x1="-0.6" y1="13.4" x2="0.5" y2="13.4" width="0.6096" layer="21"/>
+<wire x1="0.5" y1="13.4" x2="0.5" y2="9.9" width="0.6096" layer="21"/>
+<wire x1="0.5" y1="9.9" x2="1.6" y2="9.9" width="0.6096" layer="21"/>
+<wire x1="1.6" y1="9.9" x2="1.6" y2="13.4" width="0.6096" layer="21"/>
+<wire x1="1.6" y1="13.4" x2="5.6" y2="13.4" width="0.6096" layer="21"/>
+<wire x1="-4.9" y1="8.5" x2="-4.9" y2="7.9" width="0.6096" layer="21"/>
+<wire x1="-4.9" y1="7.9" x2="1.6" y2="7.9" width="0.6096" layer="21"/>
+<text x="-4" y="2.6" size="1.4224" layer="21">ESP - 12</text>
+<text x="-7.7" y="-11.9" size="1.4224" layer="27">&gt;Value</text>
+<text x="-7.7" y="15.1" size="1.4224" layer="25">&gt;Name</text>
 </package>
 </packages>
 </library>
@@ -1755,7 +1764,7 @@ design rules under a new name.</description>
 </element>
 <element name="C1" library="SparkFun-Capacitors" package="EIA3216" value="10uF" x="38.1" y="29.21" rot="R270"/>
 <element name="C2" library="SparkFun-Capacitors" package="0402-CAP" value="0.1uF" x="46.99" y="27.305"/>
-<element name="U$2" library="esp8266modules" package="ESP07" value="ESP07" x="39.37" y="40.64"/>
+<element name="U$2" library="esp8266modules" package="ESP12" value="ESP12" x="-12.7" y="11.43"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -2010,13 +2019,11 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="13"/>
 <contactref element="R5" pad="1"/>
 <contactref element="R4" pad="1"/>
-<contactref element="U$2" pad="VCC"/>
 <wire x1="46.34" y1="27.305" x2="53.02" y2="33.6249" width="0" layer="19" extent="1-1"/>
 <wire x1="41.26" y1="33.655" x2="46.34" y2="27.305" width="0" layer="19" extent="1-1"/>
 <wire x1="37.45" y1="33.655" x2="41.26" y2="33.655" width="0" layer="19" extent="1-1"/>
 <wire x1="41.4562" y1="39.3433" x2="41.26" y2="33.655" width="0" layer="19" extent="1-1"/>
 <wire x1="38.1" y1="27.81" x2="37.45" y2="33.655" width="0" layer="19" extent="1-1"/>
-<wire x1="31.17" y1="47.44" x2="41.4562" y2="39.3433" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <via x="3.81" y="76.2" extent="1-16" drill="7.112"/>
@@ -2027,30 +2034,6 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$4">
 <via x="76.2" y="3.81" extent="1-16" drill="7.112"/>
-</signal>
-<signal name="N$6">
-<contactref element="U$2" pad="RX"/>
-</signal>
-<signal name="N$15">
-<contactref element="U$2" pad="TX"/>
-</signal>
-<signal name="N$16">
-<contactref element="U$2" pad="CH_PD"/>
-</signal>
-<signal name="N$17">
-<contactref element="U$2" pad="GPIO14"/>
-</signal>
-<signal name="N$18">
-<contactref element="U$2" pad="GPIO12"/>
-</signal>
-<signal name="N$20">
-<contactref element="U$2" pad="GPIO13"/>
-</signal>
-<signal name="N$21">
-<contactref element="U$2" pad="GPIO15"/>
-</signal>
-<signal name="N$22">
-<contactref element="U$2" pad="GND"/>
 </signal>
 </signals>
 </board>

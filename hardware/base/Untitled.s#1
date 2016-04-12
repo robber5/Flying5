@@ -5130,12 +5130,6 @@ High-power, low thermal resistance package.</description>
 <wire x1="-398.78" y1="86.36" x2="-403.86" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$22" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="GND"/>
-<wire x1="-365.76" y1="81.28" x2="-360.68" y2="81.28" width="0.1524" layer="91"/>
-</segment>
-</net>
 </nets>
 </sheet>
 </sheets>

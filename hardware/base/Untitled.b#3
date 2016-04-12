@@ -2028,30 +2028,6 @@ design rules under a new name.</description>
 <signal name="N$4">
 <via x="76.2" y="3.81" extent="1-16" drill="7.112"/>
 </signal>
-<signal name="N$6">
-<contactref element="U$2" pad="RX"/>
-</signal>
-<signal name="N$15">
-<contactref element="U$2" pad="TX"/>
-</signal>
-<signal name="N$16">
-<contactref element="U$2" pad="CH_PD"/>
-</signal>
-<signal name="N$17">
-<contactref element="U$2" pad="GPIO14"/>
-</signal>
-<signal name="N$18">
-<contactref element="U$2" pad="GPIO12"/>
-</signal>
-<signal name="N$20">
-<contactref element="U$2" pad="GPIO13"/>
-</signal>
-<signal name="N$21">
-<contactref element="U$2" pad="GPIO15"/>
-</signal>
-<signal name="N$22">
-<contactref element="U$2" pad="GND"/>
-</signal>
 </signals>
 </board>
 </drawing>
