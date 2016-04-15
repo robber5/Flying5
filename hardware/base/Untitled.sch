@@ -160,12 +160,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
-<symbol name="5V">
-<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
-<text x="-1.016" y="3.556" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="5V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 <symbol name="3.3V">
 <wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
 <wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
@@ -191,19 +185,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="DGND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="5V" prefix="SUPPLY">
-<description>5V supply symbol</description>
-<gates>
-<gate name="G$1" symbol="5V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -3368,78 +3349,88 @@ High-power, low thermal resistance package.</description>
 </library>
 <library name="esp8266modules">
 <packages>
-<package name="ESP07">
-<description>ESP8266 Module 07 &amp; 08</description>
-<wire x1="-7.9" y1="12.4" x2="-7.9" y2="7.3" width="0.127" layer="21"/>
-<wire x1="-7.9" y1="7.3" x2="-7.9" y2="-7.6" width="0.127" layer="21"/>
-<wire x1="-7.9" y1="-7.6" x2="8.1" y2="-7.6" width="0.127" layer="21"/>
-<wire x1="8.1" y1="-7.6" x2="8.1" y2="7.3" width="0.127" layer="21"/>
-<wire x1="8.1" y1="7.3" x2="8.1" y2="10.4" width="0.127" layer="21"/>
-<wire x1="8.1" y1="10.4" x2="8.1" y2="12.4" width="0.127" layer="21"/>
-<wire x1="8.1" y1="12.4" x2="6.1" y2="12.4" width="0.127" layer="21"/>
-<wire x1="6.1" y1="12.4" x2="-7.9" y2="12.4" width="0.127" layer="21"/>
-<wire x1="-7.9" y1="7.3" x2="8.1" y2="7.3" width="0.127" layer="21"/>
-<wire x1="6.1" y1="12.4" x2="6.1" y2="10.4" width="0.127" layer="21"/>
-<wire x1="6.1" y1="10.4" x2="8.1" y2="10.4" width="0.127" layer="21"/>
-<circle x="7.1" y="11.4" radius="0.806225" width="0.127" layer="21"/>
-<circle x="7.1" y="11.4" radius="0.1" width="0.127" layer="21"/>
-<smd name="ANT" x="8.2" y="6.8" dx="2.5" dy="1" layer="1" roundness="17"/>
-<smd name="CH_PD" x="8.2" y="4.8" dx="2.5" dy="1" layer="1"/>
-<smd name="GPIO16" x="8.2" y="2.8" dx="2.5" dy="1" layer="1"/>
-<smd name="RX" x="8.2" y="0.8" dx="2.5" dy="1" layer="1"/>
-<smd name="TX" x="8.2" y="-1.2" dx="2.5" dy="1" layer="1"/>
-<smd name="NC" x="8.2" y="-3.2" dx="2.5" dy="1" layer="1"/>
-<smd name="GND" x="8.2" y="-5.2" dx="2.5" dy="1" layer="1"/>
-<smd name="VCC" x="-8.2" y="6.8" dx="2.5" dy="1" layer="1"/>
-<smd name="GPIO14" x="-8.2" y="4.8" dx="2.5" dy="1" layer="1"/>
-<smd name="GPIO12" x="-8.2" y="2.8" dx="2.5" dy="1" layer="1"/>
-<smd name="GPIO13" x="-8.2" y="0.8" dx="2.5" dy="1" layer="1"/>
-<smd name="GPIO15" x="-8.2" y="-1.2" dx="2.5" dy="1" layer="1"/>
-<smd name="GPIO2" x="-8.2" y="-3.2" dx="2.5" dy="1" layer="1"/>
-<smd name="GPIO0" x="-8.2" y="-5.2" dx="2.5" dy="1" layer="1"/>
-<text x="-3.8" y="8.7" size="1.016" layer="21">ESP-07</text>
-<rectangle x1="-7" y1="8" x2="-4" y2="11" layer="21"/>
-<rectangle x1="2" y1="8" x2="5" y2="11" layer="21"/>
-<text x="-4" y="5" size="1.016" layer="21">ESP-08</text>
-<text x="-8" y="13" size="1.27" layer="25">&gt;Name</text>
-<text x="-8" y="-9" size="1.27" layer="27">&gt;Value</text>
+<package name="ESP12">
+<description>ESP8266 Module 12</description>
+<wire x1="7.9" y1="14.2" x2="7.9" y2="8.4" width="0.127" layer="22"/>
+<wire x1="7.9" y1="-9.8" x2="-8.1" y2="-9.8" width="0.127" layer="22"/>
+<wire x1="-8.1" y1="-9.8" x2="-8.1" y2="8.4" width="0.127" layer="22"/>
+<wire x1="-8.1" y1="8.4" x2="-8.1" y2="14.2" width="0.127" layer="22"/>
+<wire x1="-8.1" y1="14.2" x2="7.9" y2="14.2" width="0.127" layer="22"/>
+<wire x1="-8.1" y1="8.4" x2="7.9" y2="8.4" width="0.127" layer="22"/>
+<pad name="GND" x="6.9" y="-8.2" drill="0.7" shape="offset"/>
+<wire x1="7.9" y1="8.4" x2="7.9" y2="-9.8" width="0.127" layer="22"/>
+<pad name="GPIO15" x="6.9" y="-6.2" drill="0.7" shape="offset"/>
+<pad name="GPIO2" x="6.9" y="-4.2" drill="0.7" shape="offset"/>
+<pad name="GPIO0" x="6.9" y="-2.2" drill="0.7" shape="offset"/>
+<pad name="GPIO5" x="6.9" y="-0.2" drill="0.7" shape="offset"/>
+<pad name="GPIO4" x="6.9" y="1.8" drill="0.7" shape="offset"/>
+<pad name="RX" x="6.9" y="3.8" drill="0.7" shape="offset"/>
+<pad name="TX" x="6.9" y="5.8" drill="0.7" shape="offset"/>
+<pad name="VCC" x="-7.1" y="-8.2" drill="0.7" shape="offset" rot="R180"/>
+<pad name="GPIO13" x="-7.1" y="-6.2" drill="0.7" shape="offset" rot="R180"/>
+<pad name="GPIO12" x="-7.1" y="-4.2" drill="0.7" shape="offset" rot="R180"/>
+<pad name="GPIO14" x="-7.1" y="-2.2" drill="0.7" shape="offset" rot="R180"/>
+<pad name="GPIO16" x="-7.1" y="-0.2" drill="0.7" shape="offset" rot="R180"/>
+<pad name="CH_PD" x="-7.1" y="1.8" drill="0.7" shape="offset" rot="R180"/>
+<pad name="ADC" x="-7.1" y="3.8" drill="0.7" shape="offset" rot="R180"/>
+<pad name="RESET" x="-7.1" y="5.8" drill="0.7" shape="offset" rot="R180"/>
+<wire x1="-4.9" y1="8.6" x2="-4.9" y2="13.5" width="0.6096" layer="21"/>
+<wire x1="-4.9" y1="13.5" x2="-4" y2="13.5" width="0.6096" layer="21"/>
+<wire x1="-4" y1="13.5" x2="-4" y2="9.8" width="0.6096" layer="21"/>
+<wire x1="-4" y1="9.8" x2="-3" y2="9.8" width="0.6096" layer="21"/>
+<wire x1="-3" y1="9.8" x2="-3" y2="13.4" width="0.6096" layer="21"/>
+<wire x1="-3" y1="13.4" x2="-1.8" y2="13.4" width="0.6096" layer="21"/>
+<wire x1="-1.8" y1="13.4" x2="-1.8" y2="9.8" width="0.6096" layer="21"/>
+<wire x1="-1.8" y1="9.8" x2="-0.6" y2="9.8" width="0.6096" layer="21"/>
+<wire x1="-0.6" y1="9.8" x2="-0.6" y2="13.4" width="0.6096" layer="21"/>
+<wire x1="-0.6" y1="13.4" x2="0.5" y2="13.4" width="0.6096" layer="21"/>
+<wire x1="0.5" y1="13.4" x2="0.5" y2="9.9" width="0.6096" layer="21"/>
+<wire x1="0.5" y1="9.9" x2="1.6" y2="9.9" width="0.6096" layer="21"/>
+<wire x1="1.6" y1="9.9" x2="1.6" y2="13.4" width="0.6096" layer="21"/>
+<wire x1="1.6" y1="13.4" x2="5.6" y2="13.4" width="0.6096" layer="21"/>
+<wire x1="-4.9" y1="8.5" x2="-4.9" y2="7.9" width="0.6096" layer="21"/>
+<wire x1="-4.9" y1="7.9" x2="1.6" y2="7.9" width="0.6096" layer="21"/>
+<text x="-4" y="2.6" size="1.4224" layer="21">ESP - 12</text>
+<text x="-7.7" y="-11.9" size="1.4224" layer="27">&gt;Value</text>
+<text x="-7.7" y="15.1" size="1.4224" layer="25">&gt;Name</text>
 </package>
 </packages>
 <symbols>
-<symbol name="ESP07">
-<description>ESP8266 Wifi module 07 &amp; 08</description>
-<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="-12.7" x2="12.7" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="12.7" y1="-12.7" x2="12.7" y2="7.62" width="0.254" layer="94"/>
-<wire x1="12.7" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
-<pin name="VCC" x="-15.24" y="5.08" visible="pin" length="middle"/>
-<pin name="GPIO14" x="-15.24" y="2.54" visible="pin" length="middle"/>
-<pin name="GPIO12" x="-15.24" y="0" visible="pin" length="middle"/>
-<pin name="GPIO13" x="-15.24" y="-2.54" visible="pin" length="middle"/>
-<pin name="GPIO15" x="-15.24" y="-5.08" visible="pin" length="middle"/>
-<pin name="GPIO2" x="-15.24" y="-7.62" visible="pin" length="middle"/>
-<pin name="GPIO0" x="-15.24" y="-10.16" visible="pin" length="middle"/>
-<pin name="ANT" x="17.78" y="5.08" visible="pin" length="middle" rot="R180"/>
-<pin name="CH_PD" x="17.78" y="2.54" visible="pin" length="middle" rot="R180"/>
-<pin name="GPIO16" x="17.78" y="0" visible="pin" length="middle" rot="R180"/>
-<pin name="RX" x="17.78" y="-2.54" visible="pin" length="middle" rot="R180"/>
-<pin name="TX" x="17.78" y="-5.08" visible="pin" length="middle" rot="R180"/>
-<pin name="NC" x="17.78" y="-7.62" visible="pin" length="middle" rot="R180"/>
-<pin name="GND" x="17.78" y="-10.16" visible="pin" length="middle" rot="R180"/>
-<text x="-10.16" y="7.62" size="1.778" layer="95">&gt;Name</text>
-<text x="-10.16" y="-15.24" size="1.778" layer="96">&gt;Value</text>
+<symbol name="ESP12">
+<wire x1="-12.7" y1="10.16" x2="-12.7" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-12.7" x2="10.16" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-12.7" x2="10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="10.16" x2="-12.7" y2="10.16" width="0.254" layer="94"/>
+<pin name="RESET" x="-17.78" y="7.62" visible="pin" length="middle"/>
+<pin name="ADC" x="-17.78" y="5.08" visible="pin" length="middle"/>
+<pin name="CH_PD" x="-17.78" y="2.54" visible="pin" length="middle"/>
+<pin name="GPIO16" x="-17.78" y="0" visible="pin" length="middle"/>
+<pin name="GPIO14" x="-17.78" y="-2.54" visible="pin" length="middle"/>
+<pin name="GPIO12" x="-17.78" y="-5.08" visible="pin" length="middle"/>
+<pin name="GPIO13" x="-17.78" y="-7.62" visible="pin" length="middle"/>
+<pin name="VCC" x="-17.78" y="-10.16" visible="pin" length="middle"/>
+<pin name="GND" x="15.24" y="-10.16" visible="pin" length="middle" rot="R180"/>
+<pin name="GPIO15" x="15.24" y="-7.62" visible="pin" length="middle" rot="R180"/>
+<pin name="GPIO2" x="15.24" y="-5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="GPIO0" x="15.24" y="-2.54" visible="pin" length="middle" rot="R180"/>
+<pin name="GPIO5" x="15.24" y="0" visible="pin" length="middle" rot="R180"/>
+<pin name="GPIO4" x="15.24" y="2.54" visible="pin" length="middle" rot="R180"/>
+<pin name="RX" x="15.24" y="5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="TX" x="15.24" y="7.62" visible="pin" length="middle" rot="R180"/>
+<text x="-12.7" y="10.16" size="1.778" layer="95">&gt;Name</text>
+<text x="-12.7" y="-15.24" size="1.778" layer="96">&gt;Value</text>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="ESP07">
-<description>ESP8266 Wifi module 07 &amp; 08</description>
+<deviceset name="ESP12">
+<description>ESP8266 Wifi module 12</description>
 <gates>
-<gate name="G$1" symbol="ESP07" x="0" y="0"/>
+<gate name="G$1" symbol="ESP12" x="0" y="-5.08"/>
 </gates>
 <devices>
-<device name="" package="ESP07">
+<device name="" package="ESP12">
 <connects>
-<connect gate="G$1" pin="ANT" pad="ANT"/>
+<connect gate="G$1" pin="ADC" pad="ADC"/>
 <connect gate="G$1" pin="CH_PD" pad="CH_PD"/>
 <connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="GPIO0" pad="GPIO0"/>
@@ -3449,7 +3440,9 @@ High-power, low thermal resistance package.</description>
 <connect gate="G$1" pin="GPIO15" pad="GPIO15"/>
 <connect gate="G$1" pin="GPIO16" pad="GPIO16"/>
 <connect gate="G$1" pin="GPIO2" pad="GPIO2"/>
-<connect gate="G$1" pin="NC" pad="NC"/>
+<connect gate="G$1" pin="GPIO4" pad="GPIO4"/>
+<connect gate="G$1" pin="GPIO5" pad="GPIO5"/>
+<connect gate="G$1" pin="RESET" pad="RESET"/>
 <connect gate="G$1" pin="RX" pad="RX"/>
 <connect gate="G$1" pin="TX" pad="TX"/>
 <connect gate="G$1" pin="VCC" pad="VCC"/>
@@ -3472,7 +3465,6 @@ High-power, low thermal resistance package.</description>
 </class>
 </classes>
 <parts>
-<part name="C9" library="SparkFun-Capacitors" deviceset="CAP" device="0402-CAP" value="0.1uF"/>
 <part name="R4" library="SparkFun-Passives" deviceset="RESISTOR" device="0402-RES" value="10K"/>
 <part name="R5" library="SparkFun-Passives" deviceset="RESISTOR" device="0402-RES" value="10K"/>
 <part name="C6" library="SparkFun-Capacitors" deviceset="CAP" device="0402-CAP" value="0.1uF"/>
@@ -3499,7 +3491,6 @@ High-power, low thermal resistance package.</description>
 <part name="R14" library="SparkFun-Passives" deviceset="RESISTOR" device="0402-RES" value="10K"/>
 <part name="POWER" library="SparkFun-Connectors" deviceset="M02" device="PTH" value=""/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="JP3" library="SparkFun-Connectors" deviceset="M02" device="PTH3" value="Front Right"/>
 <part name="JP4" library="SparkFun-Connectors" deviceset="M02" device="PTH3" value="Rear Right"/>
 <part name="JP5" library="SparkFun-Connectors" deviceset="M02" device="PTH3" value="Rear Left"/>
@@ -3518,13 +3509,12 @@ High-power, low thermal resistance package.</description>
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="SUPPLY8" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
-<part name="SUPPLY9" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="SUPPLY10" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
-<part name="U$2" library="esp8266modules" deviceset="ESP07" device=""/>
 <part name="R1" library="SparkFun-Passives" deviceset="RESISTOR" device="0402-RES" value="1K"/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="U$3" library="esp8266modules" deviceset="ESP12" device=""/>
+<part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3547,7 +3537,6 @@ High-power, low thermal resistance package.</description>
 <text x="-134.62" y="-83.82" size="6.4516" layer="94">传感器</text>
 </plain>
 <instances>
-<instance part="C9" gate="G$1" x="-22.86" y="15.24"/>
 <instance part="R4" gate="G$1" x="-5.08" y="-48.26" smashed="yes" rot="R270">
 <attribute name="NAME" x="-2.54" y="-48.5394" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-3.048" y="-51.308" size="1.778" layer="96"/>
@@ -3588,7 +3577,6 @@ High-power, low thermal resistance package.</description>
 <instance part="R14" gate="G$1" x="86.36" y="-55.88" rot="R90"/>
 <instance part="POWER" gate="G$1" x="12.7" y="15.24"/>
 <instance part="GND6" gate="1" x="22.86" y="12.7"/>
-<instance part="GND1" gate="1" x="-22.86" y="2.54"/>
 <instance part="JP3" gate="G$1" x="116.84" y="-35.56" rot="R180"/>
 <instance part="JP4" gate="G$1" x="116.84" y="10.16" rot="R180"/>
 <instance part="JP5" gate="G$1" x="116.84" y="55.88" rot="R180"/>
@@ -3610,13 +3598,12 @@ High-power, low thermal resistance package.</description>
 <instance part="SUPPLY1" gate="G$1" x="-63.5" y="33.02"/>
 <instance part="SUPPLY7" gate="G$1" x="-48.26" y="-38.1"/>
 <instance part="SUPPLY8" gate="G$1" x="-5.08" y="-38.1"/>
-<instance part="SUPPLY9" gate="G$1" x="-22.86" y="25.4"/>
 <instance part="SUPPLY10" gate="G$1" x="22.86" y="17.78"/>
 <instance part="SUPPLY2" gate="G$1" x="-129.54" y="25.4" rot="R90"/>
-<instance part="U$2" gate="G$1" x="-93.98" y="78.74"/>
-<instance part="R1" gate="G$1" x="-127" y="68.58" rot="R90"/>
-<instance part="GND2" gate="1" x="-127" y="58.42"/>
-<instance part="GND7" gate="1" x="-71.12" y="66.04"/>
+<instance part="R1" gate="G$1" x="-66.04" y="63.5" rot="R90"/>
+<instance part="GND2" gate="1" x="-66.04" y="53.34"/>
+<instance part="U$3" gate="G$1" x="-96.52" y="76.2"/>
+<instance part="GND1" gate="1" x="-73.66" y="63.5"/>
 </instances>
 <busses>
 </busses>
@@ -3689,11 +3676,6 @@ High-power, low thermal resistance package.</description>
 <wire x1="20.32" y1="15.24" x2="22.86" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="-22.86" y1="12.7" x2="-22.86" y2="5.08" width="0.1524" layer="91"/>
-<pinref part="C9" gate="G$1" pin="2"/>
-<pinref part="GND1" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="C14" gate="G$1" pin="1"/>
 <wire x1="-5.08" y1="-73.66" x2="-5.08" y2="-76.2" width="0.1524" layer="91"/>
 <pinref part="GND24" gate="1" pin="GND"/>
@@ -3728,13 +3710,13 @@ High-power, low thermal resistance package.</description>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="-127" y1="63.5" x2="-127" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="58.42" x2="-66.04" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="GND"/>
-<wire x1="-76.2" y1="68.58" x2="-71.12" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="GND7" gate="1" pin="GND"/>
+<pinref part="U$3" gate="G$1" pin="GND"/>
+<wire x1="-81.28" y1="66.04" x2="-73.66" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="GND1" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="DTR" class="0">
@@ -3744,9 +3726,9 @@ High-power, low thermal resistance package.</description>
 <label x="7.62" y="68.58" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="GPIO0"/>
-<wire x1="-109.22" y1="68.58" x2="-114.3" y2="68.58" width="0.1524" layer="91"/>
-<label x="-114.3" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$3" gate="G$1" pin="GPIO0"/>
+<wire x1="-81.28" y1="73.66" x2="-73.66" y2="73.66" width="0.1524" layer="91"/>
+<label x="-73.66" y="73.66" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SCL" class="0">
@@ -3756,6 +3738,11 @@ High-power, low thermal resistance package.</description>
 <pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="-5.08" y1="-55.88" x2="-5.08" y2="-53.34" width="0.1524" layer="91"/>
 <label x="-9.652" y="-57.658" size="1.4224" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="GPIO4"/>
+<wire x1="-81.28" y1="78.74" x2="-73.66" y2="78.74" width="0.1524" layer="91"/>
+<label x="-73.66" y="78.74" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$32" class="0">
@@ -3777,7 +3764,6 @@ High-power, low thermal resistance package.</description>
 <segment>
 <pinref part="POWER" gate="G$1" pin="2"/>
 <wire x1="20.32" y1="17.78" x2="22.86" y2="17.78" width="0.1524" layer="91"/>
-<label x="22.86" y="17.78" size="1.016" layer="95" xref="yes"/>
 <pinref part="SUPPLY10" gate="G$1" pin="VCC"/>
 </segment>
 <segment>
@@ -3815,6 +3801,11 @@ High-power, low thermal resistance package.</description>
 <wire x1="2.54" y1="76.2" x2="7.62" y2="76.2" width="0.1524" layer="91"/>
 <label x="7.62" y="76.2" size="1.016" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="ADC"/>
+<wire x1="-114.3" y1="81.28" x2="-121.92" y2="81.28" width="0.1524" layer="91"/>
+<label x="-121.92" y="81.28" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="SDA" class="0">
 <segment>
@@ -3823,6 +3814,11 @@ High-power, low thermal resistance package.</description>
 <wire x1="5.08" y1="-58.42" x2="-10.16" y2="-58.42" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="SDA"/>
 <label x="-9.652" y="-60.198" size="1.4224" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="GPIO5"/>
+<wire x1="-81.28" y1="76.2" x2="-73.66" y2="76.2" width="0.1524" layer="91"/>
+<label x="-73.66" y="76.2" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$38" class="0">
@@ -3859,9 +3855,9 @@ High-power, low thermal resistance package.</description>
 <junction x="86.36" y="-50.8"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="GPIO16"/>
-<wire x1="-76.2" y1="78.74" x2="-71.12" y2="78.74" width="0.1524" layer="91"/>
-<label x="-71.12" y="78.74" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$3" gate="G$1" pin="GPIO16"/>
+<wire x1="-114.3" y1="76.2" x2="-121.92" y2="76.2" width="0.1524" layer="91"/>
+<label x="-121.92" y="76.2" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="M3" class="0">
@@ -3874,9 +3870,9 @@ High-power, low thermal resistance package.</description>
 <label x="78.74" y="-5.08" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="GPIO13"/>
-<wire x1="-109.22" y1="76.2" x2="-114.3" y2="76.2" width="0.1524" layer="91"/>
-<label x="-114.3" y="76.2" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$3" gate="G$1" pin="GPIO13"/>
+<wire x1="-114.3" y1="68.58" x2="-121.92" y2="68.58" width="0.1524" layer="91"/>
+<label x="-121.92" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="M2" class="0">
@@ -3889,9 +3885,9 @@ High-power, low thermal resistance package.</description>
 <label x="78.74" y="40.64" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="GPIO12"/>
-<wire x1="-109.22" y1="78.74" x2="-114.3" y2="78.74" width="0.1524" layer="91"/>
-<label x="-114.3" y="78.74" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$3" gate="G$1" pin="GPIO12"/>
+<wire x1="-114.3" y1="71.12" x2="-121.92" y2="71.12" width="0.1524" layer="91"/>
+<label x="-121.92" y="71.12" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="M1" class="0">
@@ -3904,9 +3900,9 @@ High-power, low thermal resistance package.</description>
 <label x="78.74" y="86.36" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="GPIO14"/>
-<wire x1="-109.22" y1="81.28" x2="-114.3" y2="81.28" width="0.1524" layer="91"/>
-<label x="-114.3" y="81.28" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$3" gate="G$1" pin="GPIO14"/>
+<wire x1="-114.3" y1="73.66" x2="-121.92" y2="73.66" width="0.1524" layer="91"/>
+<label x="-121.92" y="73.66" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -3945,13 +3941,6 @@ High-power, low thermal resistance package.</description>
 <wire x1="-5.08" y1="-63.5" x2="-5.08" y2="-66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="5V" class="0">
-<segment>
-<pinref part="C9" gate="G$1" pin="1"/>
-<wire x1="-22.86" y1="25.4" x2="-22.86" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="SUPPLY9" gate="G$1" pin="5V"/>
-</segment>
-</net>
 <net name="3.3V" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="OUT"/>
@@ -3982,49 +3971,49 @@ High-power, low thermal resistance package.</description>
 <pinref part="SUPPLY8" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="VCC"/>
-<wire x1="-109.22" y1="83.82" x2="-114.3" y2="83.82" width="0.1524" layer="91"/>
-<label x="-114.3" y="83.82" size="1.27" layer="95" rot="MR0" xref="yes"/>
+<pinref part="U$3" gate="G$1" pin="GPIO2"/>
+<wire x1="-81.28" y1="71.12" x2="-73.66" y2="71.12" width="0.1524" layer="91"/>
+<label x="-73.66" y="71.12" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="CH_PD"/>
-<wire x1="-76.2" y1="81.28" x2="-71.12" y2="81.28" width="0.1524" layer="91"/>
-<label x="-71.12" y="81.28" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$3" gate="G$1" pin="VCC"/>
+<wire x1="-114.3" y1="66.04" x2="-121.92" y2="66.04" width="0.1524" layer="91"/>
+<label x="-121.92" y="66.04" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="GPIO2"/>
-<wire x1="-109.22" y1="71.12" x2="-114.3" y2="71.12" width="0.1524" layer="91"/>
-<label x="-114.3" y="71.12" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$3" gate="G$1" pin="CH_PD"/>
+<wire x1="-114.3" y1="78.74" x2="-121.92" y2="78.74" width="0.1524" layer="91"/>
+<label x="-121.92" y="78.74" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="RX" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="RX"/>
-<wire x1="-76.2" y1="76.2" x2="-71.12" y2="76.2" width="0.1524" layer="91"/>
-<label x="-71.12" y="76.2" size="1.27" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="FTDI" gate="G$1" pin="TXO"/>
 <wire x1="2.54" y1="71.12" x2="7.62" y2="71.12" width="0.1524" layer="91"/>
 <label x="7.62" y="71.12" size="1.016" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="RX"/>
+<wire x1="-81.28" y1="81.28" x2="-73.66" y2="81.28" width="0.1524" layer="91"/>
+<label x="-73.66" y="81.28" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="TX" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="TX"/>
-<wire x1="-76.2" y1="73.66" x2="-71.12" y2="73.66" width="0.1524" layer="91"/>
-<label x="-71.12" y="73.66" size="1.27" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="FTDI" gate="G$1" pin="RXI"/>
 <wire x1="2.54" y1="73.66" x2="7.62" y2="73.66" width="0.1524" layer="91"/>
 <label x="7.62" y="73.66" size="1.016" layer="95" xref="yes"/>
 </segment>
-</net>
-<net name="N$21" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="GPIO15"/>
-<wire x1="-109.22" y1="73.66" x2="-127" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="G$1" pin="TX"/>
+<wire x1="-81.28" y1="83.82" x2="-73.66" y2="83.82" width="0.1524" layer="91"/>
+<label x="-73.66" y="83.82" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="GPIO15"/>
+<wire x1="-81.28" y1="68.58" x2="-66.04" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 </segment>
 </net>
