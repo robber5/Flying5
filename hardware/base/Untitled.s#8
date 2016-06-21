@@ -3956,6 +3956,11 @@ High-power, low thermal resistance package.</description>
 <wire x1="-66.04" y1="88.9" x2="-60.96" y2="88.9" width="0.1524" layer="91"/>
 <label x="-60.96" y="88.9" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="GPIO16"/>
+<wire x1="-99.06" y1="60.96" x2="-106.68" y2="60.96" width="0.1524" layer="91"/>
+<label x="-106.68" y="60.96" size="1.778" layer="95" rot="R180"/>
+</segment>
 </net>
 <net name="M3" class="0">
 <segment>
@@ -3970,6 +3975,11 @@ High-power, low thermal resistance package.</description>
 <pinref part="U$2" gate="G$1" pin="GPIO13"/>
 <wire x1="-99.06" y1="86.36" x2="-104.14" y2="86.36" width="0.1524" layer="91"/>
 <label x="-104.14" y="86.36" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="GPIO13"/>
+<wire x1="-99.06" y1="53.34" x2="-106.68" y2="53.34" width="0.1524" layer="91"/>
+<label x="-106.68" y="53.34" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="M2" class="0">
@@ -3986,6 +3996,11 @@ High-power, low thermal resistance package.</description>
 <wire x1="-99.06" y1="88.9" x2="-104.14" y2="88.9" width="0.1524" layer="91"/>
 <label x="-104.14" y="88.9" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="GPIO12"/>
+<wire x1="-99.06" y1="55.88" x2="-106.68" y2="55.88" width="0.1524" layer="91"/>
+<label x="-106.68" y="55.88" size="1.778" layer="95" rot="R180"/>
+</segment>
 </net>
 <net name="M1" class="0">
 <segment>
@@ -4000,6 +4015,11 @@ High-power, low thermal resistance package.</description>
 <pinref part="U$2" gate="G$1" pin="GPIO14"/>
 <wire x1="-99.06" y1="91.44" x2="-104.14" y2="91.44" width="0.1524" layer="91"/>
 <label x="-104.14" y="91.44" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="GPIO14"/>
+<wire x1="-99.06" y1="58.42" x2="-106.68" y2="58.42" width="0.1524" layer="91"/>
+<label x="-106.68" y="58.42" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -4131,34 +4151,6 @@ High-power, low thermal resistance package.</description>
 <pinref part="U$3" gate="G$1" pin="GPIO15"/>
 <wire x1="-66.04" y1="53.34" x2="-50.8" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
-</segment>
-</net>
-<net name="N$22" class="0">
-<segment>
-<pinref part="U$3" gate="G$1" pin="GPIO13"/>
-<wire x1="-99.06" y1="53.34" x2="-106.68" y2="53.34" width="0.1524" layer="91"/>
-<label x="-106.68" y="53.34" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$23" class="0">
-<segment>
-<pinref part="U$3" gate="G$1" pin="GPIO12"/>
-<wire x1="-99.06" y1="55.88" x2="-106.68" y2="55.88" width="0.1524" layer="91"/>
-<label x="-106.68" y="55.88" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$24" class="0">
-<segment>
-<pinref part="U$3" gate="G$1" pin="GPIO14"/>
-<wire x1="-99.06" y1="58.42" x2="-106.68" y2="58.42" width="0.1524" layer="91"/>
-<label x="-106.68" y="58.42" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$25" class="0">
-<segment>
-<pinref part="U$3" gate="G$1" pin="GPIO16"/>
-<wire x1="-99.06" y1="60.96" x2="-106.68" y2="60.96" width="0.1524" layer="91"/>
-<label x="-106.68" y="60.96" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 </nets>
