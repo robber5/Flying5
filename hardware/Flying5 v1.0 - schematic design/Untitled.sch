@@ -4334,7 +4334,7 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 </sheet>
 </sheets>
 <errors>
-<approved hash="202,1,-83.82,60.96,U3,BP,,,,"/>
+<approved hash="202,1,-93.98,15.24,U2,BP,,,,"/>
 </errors>
 </schematic>
 </drawing>
