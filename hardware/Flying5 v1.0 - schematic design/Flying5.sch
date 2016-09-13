@@ -3606,6 +3606,8 @@ https://item.taobao.com/item.htm?id=45043976655</description>
 <part name="U$2" library="example" deviceset="SWITCH_SK12D07" device=""/>
 <part name="J1" library="SparkFun-Connectors" deviceset="M02" device="PTH" value="短路点"/>
 <part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="R2" library="SparkFun-Passives" deviceset="RESISTOR" device="0402-RES" value="1K"/>
+<part name="GND12" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3696,6 +3698,8 @@ https://item.taobao.com/item.htm?id=45043976655</description>
 <instance part="U$2" gate="G$1" x="0" y="20.32"/>
 <instance part="J1" gate="G$1" x="-50.8" y="76.2"/>
 <instance part="GND7" gate="1" x="-38.1" y="68.58"/>
+<instance part="R2" gate="G$1" x="12.7" y="-68.58" rot="R90"/>
+<instance part="GND12" gate="1" x="12.7" y="-78.74"/>
 </instances>
 <busses>
 </busses>
@@ -3811,6 +3815,11 @@ https://item.taobao.com/item.htm?id=45043976655</description>
 <wire x1="-43.18" y1="76.2" x2="-38.1" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="76.2" x2="-38.1" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="GND7" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="GND12" gate="1" pin="GND"/>
+<wire x1="12.7" y1="-73.66" x2="12.7" y2="-76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DTR" class="0">
@@ -4125,6 +4134,14 @@ https://item.taobao.com/item.htm?id=45043976655</description>
 <pinref part="J1" gate="G$1" pin="2"/>
 <wire x1="-43.18" y1="78.74" x2="-38.1" y2="78.74" width="0.1524" layer="91"/>
 <label x="-38.1" y="78.74" size="1.016" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="AD0"/>
+<wire x1="-10.16" y1="-60.96" x2="12.7" y2="-60.96" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="-60.96" x2="12.7" y2="-63.5" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>
