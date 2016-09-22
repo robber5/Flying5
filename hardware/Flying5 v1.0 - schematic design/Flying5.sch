@@ -4156,7 +4156,7 @@ DPDT SMT slide switch, AYZ0202, SWCH-08179</description>
 <segment>
 <pinref part="ESP12E" gate="G$1" pin="GPIO2"/>
 <wire x1="-88.9" y1="76.2" x2="-86.36" y2="76.2" width="0.1524" layer="91"/>
-<label x="-86.36" y="76.2" size="1.016" layer="95" xref="yes"/>
+<label x="-86.36" y="76.2" size="1.016" layer="95" font="vector" ratio="5" xref="yes"/>
 </segment>
 </net>
 <net name="N$38" class="0">
